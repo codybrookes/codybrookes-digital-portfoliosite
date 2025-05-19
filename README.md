@@ -1,62 +1,82 @@
-# 🚀 CodyBrookes.com
+# 🚀 CodyBrookes.com — Static Portfolio Website with CI/CD
 
-A personal portfolio website built with HTML/CSS, hosted on **AWS S3 + CloudFront**, and deployed automatically using **GitHub Actions CI/CD**.
+A clean, fast, and fully automated personal website built using **HTML/CSS** and deployed via a modern **CI/CD pipeline** using **GitHub Actions + AWS (S3, CloudFront, Route 53)**.
 
-![Deployment Status](https://img.shields.io/github/actions/workflow/status/codybrookes/codybrookes-digital-portfoliosite/deploy.yml?branch=main&label=deploy)
-
----
-
-## 🔍 Overview
-
-This site showcases my work, passion for technology, and projects in cloud, automation, and full-stack development. It's designed for speed, simplicity, and scalability.
+![Deployment Status](https://img.shields.io/github/actions/workflow/status/codybrookes/YOUR_REPO_NAME/deploy.yml?branch=main&label=deploy)
 
 ---
 
-## 🧱 Tech Stack
+## 🧱 Project Overview
 
-| Tech         | Purpose                          |
-|--------------|----------------------------------|
-| HTML/CSS     | Static website content           |
-| AWS S3       | Static site hosting              |
-| CloudFront   | CDN + HTTPS + caching            |
-| GitHub       | Source control                   |
-| GitHub Actions | CI/CD for automatic deployment |
+This repository contains the source code and infrastructure setup for my personal portfolio website, hosted at:
+
+🌐 **[https://www.codybrookes.com](https://www.codybrookes.com)**
+
+The site is 100% static and optimized for performance and simplicity.
 
 ---
 
-## ⚙️ CI/CD Pipeline Details
+## 🌐 Features & Architecture
 
-Every push to the `main` branch triggers an automated deployment via [GitHub Actions](https://github.com/features/actions).
+- **Static Website**: Built using pure HTML/CSS
+- **AWS S3**: Hosts static files with public access enabled
+- **AWS CloudFront**: Distributes content globally with HTTPS and caching
+- **Route 53**: Manages DNS for the `codybrookes.com` domain
+- **GitHub Actions**: Handles continuous deployment from `main` branch
 
-### 📦 Workflow Steps:
+---
 
-1. **Checkout** the latest code from the repo
-2. **Authenticate** with AWS using encrypted GitHub secrets
-3. **Sync** the site to S3 using `aws s3 sync`
-4. **Invalidate CloudFront** cache to reflect the latest changes
+## ⚙️ CI/CD Pipeline Summary
 
-### 🛡️ Secrets Used
+- Push to `main` triggers an automated GitHub Actions workflow
+- Syncs updated files to the S3 bucket (`codybrookes.com`)
+- Invalidates CloudFront distribution to reflect changes instantly
 
-Secrets are stored securely in GitHub under:
+### 🔐 GitHub Secrets Used
 - `AWS_ACCESS_KEY_ID`
 - `AWS_SECRET_ACCESS_KEY`
 - `AWS_REGION`
 
+Workflow file:  
+`.github/workflows/deploy.yml`
+
 ---
 
-## 🗂 Directory Structure
+## 🗂 Repo Structure
+├── index.html # Main website HTML
+├── experience.html
+├── projects.html
+├── contact.html
+├── thank-you.html
+├── styles.css # Custom styles
+├── .github/
+│ └── workflows/
+│ └── deploy.yml # GitHub Actions workflow
+└── README.md # You're here
 
-```bash
-.github/workflows/deploy.yml   # GitHub Actions workflow
-index.html                     # Main site HTML
-styles.css                     # Stylesheet
-experience.html
-projects.html
-contact.html
-thank-you.htm
-...
 
-## 🌐 Live Site
-https://www.codybrookes.com
+## 🛠 How I Use It
 
-Hosted via AWS S3 with CloudFront, using custom domain + HTTPS.
+- **Update Content**: Edit HTML/CSS locally
+- **Push to GitHub**: Changes are deployed automatically
+- **Website Live**: Updated within ~1 minute globally via CloudFront
+
+---
+
+## ✨ Highlights
+
+- 📦 Fully automated pipeline from commit to deploy
+- ☁️ Real-world AWS infrastructure setup (IAM, S3, CloudFront, Route 53)
+- 🔐 Secure secrets management via GitHub
+- ⚡ Ultra-fast global performance with CDN and HTTPS
+
+---
+
+## 🤝 Let's Connect
+
+This site is just the start of a broader portfolio — more projects, automation, and infrastructure coming soon.
+
+Built and maintained by **Cody Brookes** 💻  
+Reach me at: [https://www.codybrookes.com#contact](https://www.codybrookes.com#contact)
+
+---
