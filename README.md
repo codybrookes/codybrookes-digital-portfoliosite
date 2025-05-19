@@ -2,7 +2,7 @@
 
 A clean, fast, and fully automated personal website built using **HTML/CSS** and deployed via a modern **CI/CD pipeline** using **GitHub Actions + AWS (S3, CloudFront, Route 53)**.
 
-![Deployment Status](https://img.shields.io/github/actions/workflow/status/codybrookes/YOUR_REPO_NAME/deploy.yml?branch=main&label=deploy)
+![Deployment Status](https://img.shields.io/github/actions/workflow/status/codybrookes/codybrookes-digital-portfoliosite/deploy.yml?branch=main&label=deploy)
 
 ---
 
