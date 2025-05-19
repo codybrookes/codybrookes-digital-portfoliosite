@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | Cody Brookes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span>CO</span><br><span>DY</span>
+    </a>
+    <nav class="nav-links">
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience Timeline</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Background+Photo.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 1;
+    }
+
+    .timeline-item:hover {
+      transform: scale(1.03);
+    }
+
+    .year {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #ff4c4c;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .details {
+      display: none;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      color: #ddd;
+      text-align: left;
+    }
+
+    .details ul {
+        padding-left: 1.2rem;
+    }
+
+    .active .details {
+      display: block;
+    }
+
+    .rocket {
+      width: 80px;
+      margin: 2rem auto;
+      display: block;
+    }
+
+    .credentials {
+      margin-top: 4rem;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    .credentials h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .credentials-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .credential {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(4px);
+    }
+
+    .credential h4 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #ff4c4c;
+    }
+    
+    .credential p {
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+
+      /* Social Icons */
+  .social-icons {
+    position: fixed;
+    bottom: 60px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+  }
+  .social-icons a {
+    color: #aaa;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  .social-icons a:hover {
+    color: #ff4c4c;
+  }
+  .resume-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 0px;
+  }
+
+  .resume-dropdown .fas {
+   font-size: 1.5rem;
+   color: white;
+   transition: color 0.3s ease;
+  }
+
+  .resume-dropdown:hover .fas {
+   color: #ff4c4c;
+  }
+
+  .dropdown-menu {
+   display: none;
+   position: absolute;
+   top: 50%;
+   left: calc(100% + 5px);
+   transform: translateY(-50%)
+   background: rgba(0, 0, 0, 0.9);
+   padding: 10px;
+   border-radius: 8px;
+   min-width: 180px;
+   z-index: 99;
+   text-align: left;
+   white-space: nowrap;
+  }
+
+  .dropdown-menu a {
+   display: block;
+   color: white;
+   padding: 6px 10px;
+   text-decoration: none;
+   font-size: 0.9rem;
+  }
+  .dropdown-menu a:hover {
+   background-color: #ff4c4c;
+   color: #fff;
+  }
+
+  .resume-dropdown:hover .dropdown-menu {
+   display: block;
+  }
+    @media (max-width: 600px) {
+      .timeline-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="timeline-container">
+    <h2 style="text-align:center; font-size: 2.5rem; margin-bottom: 40px;">Professional Experience</h2>
+
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item" onclick="toggleDetails(this)">
+      <div class="year">2024 – Present</div>
+      <div class="title">Operations Technology Consultant - Fidelity</div>
+      <div class="details">
+        <ul>
+          <h3>Cloud Engineer Experience</h3>
+          <li>Migrated all on-prem virtual desktops to Azure, cutting HVD costs by $350,000 annually.</li>
+          <li>Led cloud adoption projects including shared drive migration to SharePoint and Azure.</li>
+          <li>Created automation tools using HTML/JavaScript to streamline internal request workflows.</li>
+          <h3>Technology Support Experience</h3>
+          <li>Support division-wide application deployments and system upgrades (e.g., Windows, M365).</li>
+          <li>Provide escalated support for hardware/software issues across all endpoints (laptops & HVDs).</li>
+          <li>Built custom intake automations using HTML/JavaScript to reduce repeat issue volume.</li>
+          <li>Admin Jira, Confluence, and SharePoint for issue management and team collaboration.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item" onclick="toggleDetails(this)">
+      <div class="year">2021 – 2024</div>
+      <div class="title">Desktop & Network Support Analyst - Fidelity</div>
+      <div class="details">
+        <ul>
+            <h3>Cloud Engineer & Technology Support Experience</h3>
+            <li>Managed desktop and Azure Virtual Desktop (AVD) onboarding for 8,000+ employees.</li>
+            <li>Led change management and access provisioning for multiple enterprise tools.</li>
+            <li>Supported executive leadership daily, ensuring uninterrupted IT performance.</li>
+            <li>Implemented Jira-based ticketing and process tracking, reducing response times by 10%.</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item" onclick="toggleDetails(this)">
+      <div class="year">2018 – 2021</div>
+      <div class="title">Technology Support Consultant - Fidelity</div>
+      <div class="details">
+        <ul>
+            <h3>Technology Support Experience</h3>
+            <li>Reduced support ticket load 15% by developing troubleshooting documentation.</li>
+            <li>Collaborated with product teams to eliminate root issues, reducing escalations by 30%.</li>
+            <li>Delivered daily first/second-line support in high-volume call center environment.</li>
+            <li>Delivered Tier 1 & 2 support in fast-paced call center environment (30+ issues/day).</li>
+            <li>Trained new support reps and coordinated with dev teams to reduce escalations by 30%.</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item" onclick="toggleDetails(this)">
+      <div class="year">2014 – 2018</div>
+      <div class="title">University of North Texas - BBA</div>
+      <div class="details">
+        <ul>
+          <li>Bachelor of Business Administration in Business Analytics</li>
+          <li>Clubs - IIBA International Institute of Business Analysis</li>
+        </ul>
+      </div>
+    </div>
+    <section class="credentials">
+      <h2>Credentials & Courses</h2>
+      <div class="credentials-list">
+        <div class="credential">
+          <h4><a href="https://bcert.me/bc/html/show-badge.html?b=hveqygbn" target="_blank" style="color: #ff4c4c; text-decoration: none;">CSM</a></h4>
+          <p>The Certified Scrum Master (CSM) certification, offered by the Scrum Alliance, validates an individual’s knowledge of Agile principles and Scrum practices.</p>
+        </div>
+        <div class="credential">
+           <h4><a href="https://www.linkedin.com/in/cbrookes1/details/certifications/1707801056361/single-media-viewer/?profileId=ACoAACFlZ9cBu73kMK7ayT6KV5dPvQf8MUvFydY" target="_blank" style="color: #ff4c4c; text-decoration: none;">CSPO</a></h4>        
+            <p>The Certified Scrum Product Owner (CSPO) certification, awarded by the Scrum Alliance, recognizes expertise in defining product vision, managing the product backlog, and delivering value.</p>
+        </div>
+        <div class="credential">
+          <h4><a href="https://s3.amazonaws.co" target="_blank" style="color: #ff4c4c; text-decoration: none;">Azure Fundamentals</a></h4>
+          <p>Cloud computing concepts with emphasis on Microsoft Azure services, deployment, and governance.</p>
+        </div>
+        <div class="credential">
+          <h4><a href="https://s3.amazonaws.com/scruminc-certs/RSASP-6869064" target="_blank" style="color: #ff4c4c; text-decoration: none;">Scrum@Scale Practitioner</a></h4>
+          <p>The Scrum@Scale Practitioner certification demonstrates a deep understanding of how to scale Agile practices across multiple teams, departments, and products.</p>
+        </div>
+        <div class="credential">
+          <h4><a href="https://www.linkedin.com/in/cbrookes1/details/certifications/1743522185513/single-media-viewer/?profileId=ACoAACFlZ9cBu73kMK7ayT6KV5dPvQf8MUvFydY" target="_blank" style="color: #ff4c4c; text-decoration: none;">AWS Certified Practitioner</a></h4>          
+          <p>Fundamental understanding of AWS Cloud concepts, core services, security, architecture, pricing, and support.</p>
+        </div>
+        <div class="credential">
+          <h4><a href="https://certificates.simplicdn.net/share/8024841_81793821741633615161.pdf" target="_blank" style="color: #ff4c4c; text-decoration: none;">Azure 104 Course</a></h4>
+          <p>The AZ-104 course equips learners with the skills to manage Azure subscriptions, secure identities, administer infrastructure, and monitor resources.</p>
+        </div>
+        <div class="credential">
+          <h4>Accredited Project Management Course - LSU University (In Progress)</h4>
+          <p>The LSU Project Management Accredited Course provides a comprehensive overview of project management principles, methodologies, and best practices. It consists of five classes that prepare you for the PMP certification exam.</p>
+        </div>
+        <div class="credential">
+          <h4><a href="https://www.linkedin.com/in/cbrookes1/details/certifications/1747332174114/single-media-viewer/?profileId=ACoAACFlZ9cBu73kMK7ayT6KV5dPvQf8MUvFydY" target="_blank" style="color: #ff4c4c; text-decoration: none;">Scrum Inc. Registered Product Owner</a></h4>
+          <p>The Registered Product Owner™ (RPO) certification from Scrum Inc. validates an individual's expertise in maximizing product value, managing stakeholder collaboration, and effectively prioritizing work using Agile and Scrum principles</p>
+        </div>
+        <div class="social-icons">
+        <a href="https://linkedin.com/in/cbrookes1" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/codybrookes" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <!-- Resume Dropdown -->
+          <div class="resume-dropdown">
+            <i class="fas fa-file-alt"></i>
+            <div class="dropdown-menu">
+             <a href="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Cody+Resumes+IT+Support.pdf" target="_blank">Tech Support</a>
+             <a href="resume-cloud-engineer.pdf" target="_blank">Cloud Engineer Resume</a>
+         </div>
+       </div>
+     </div>
+             </div>
+           </div>
+         </section>
+       </div>
+     
+       <footer style="
+       background: rgba(255, 255, 255, 0.05);
+       backdrop-filter: blur(5px);
+       border-top: 1px solid rgba(255, 255, 255, 0.1);
+       padding: 40px 20px;
+       text-align: center;
+       color: #ccc;
+       margin-top: 100px;
+     ">
+       <div style="margin-bottom: 15px;">
+        <a href="https://linkedin.com/in/cbrookes1" target="_blank" style="color: #ccc; margin: 0 10px;">
+          <i class="fab fa-linkedin fa-lg"></i>
+        </a>
+        <a href="https://github.com/codybrookes" target="_blank" style="color: #ccc; margin: 0 10px;">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+        <a href="mailto:cbrookes1@hotmail.com" style="color: #ccc; margin: 0 10px;">
+          <i class="fas fa-envelope fa-lg"></i>
+        </a>
+      </div>
+      <div style="font-size: 0.9rem;">
+        © <span id="year"></span> Cody Brookes. All rights reserved.
+      </div>
+    </footer>
+    
+      <script>
+        function toggleDetails(element) {
+          element.classList.toggle('active');
+        }
+      </script>
+    </body>
+    </html>

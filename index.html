@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cody Brookes | Digital Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span>CO</span><br><span>DY</span>
+    </a>
+    <nav class="nav-links">
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Social Icons -->
+   <div class="social-icons">
+    <a href="https://linkedin.com/in/cbrookes1" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/codybrookes" aria-label="GitHub"><i class="fab fa-github"></i></a>
+
+  <!-- Resume Dropdown -->
+   <div class="resume-dropdown">
+     <i class="fas fa-file-alt"></i>
+    <div class="dropdown-menu">
+      <a href="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Cody+Resumes+IT+Support.pdf" target="_blank">IT Automation Resume</a>
+    </div>
+  </div>
+</div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1 class ="hover-text">CODY BROOKES</h1>
+      <p>Digital Portfolio</p>
+    </div>
+    <div class="scroll-indicator">SCROLL</div>
+  </section>
+
+  <!-- About ME -->
+  <section class="about-me" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Hi, I'm Cody Brookes — a tech-driven professional with a background in IT operations, automation, and growing experience in cloud engineering.</p>
+        <p>At Fidelity Investments, I’ve held roles from Technology Support Lead to Operations Technology Consultant, where I solved infrastructure issues, streamlined workflows, and supported enterprise systems.</p>
+        <p>I’ve also built tools like a <strong>full-stack EC2 CloudWatch Monitoring Stack</strong>, a <strong>serverless contact form</strong> using AWS Lambda and SES, and <strong>automation workflows</strong> using n8n.</p>
+        <p>Currently, I’m expanding my skills in cloud and DevOps, with hands-on experience in AWS, Azure, and Infrastructure as Code.</p>
+        <p>Outside of tech, I enjoy exploring new places, hiking, and playing basketball — I even played at the college level!</p>
+      </div>
+      <div class="about-image">
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/About+Photo.png" alt="Cody Brookes" />
+      </div>
+    </div>
+  </section>
+
+ <!-- Projects Section with Carousel -->
+<section class="projects-carousel">
+  <h2>My Projects</h2>
+  <div class="carousel">
+    <!-- Panel 1 -->
+    <a href="https://github.com/codybrookes/AWS-EC2-Deployment-with-Terraform" class="carousel-link">
+      <div class="carousel-panel">
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/EC2+Project+Photo.png" alt="Project 1" />
+        <div class="panel-content">
+          <h3>AWS EC2 Deployment with Terraform</h3>
+        </div>
+      </div>
+    </a>
+
+    <!-- Panel 2 -->
+    <a href="https://github.com/codybrookes/AWS-EC2-Deployment-with-Terraform" class="carousel-link">
+      <div class="carousel-panel">
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/CloudWatch+Monitoring+Photo.png" alt="Project 2" />
+        <div class="panel-content">
+          <h3>CloudWatch Monitoring Stack</h3>
+        </div>
+      </div>
+    </a>
+
+    <!-- Panel 3 -->
+    <a href="https://github.com/codybrookes/AWS-EC2-Deployment-with-Terraform" class="carousel-link">
+      <div class="carousel-panel">
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Website+Portfolio+Project+.png" alt="Project 3" />
+        <div class="panel-content">
+          <h3>Digital Portfolio Build</h3>
+        </div>
+      </div>
+    </a>
+
+    <!-- Panel 4 -->
+    <a href="https://github.com/codybrookes/Azure-Admin-Projects" class="carousel-link">
+      <div class="carousel-panel">
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Azure+Iaas+Project+Photo.png" alt="Project 4" />
+        <div class="panel-content">
+          <h3>Implement Azure Iaas</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+  <footer style="
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+    color: #ccc;
+    margin-top: 100px;
+  ">
+    <div style="margin-bottom: 15px;">
+      <a href="https://linkedin.com/in/cbrookes1" target="_blank" style="color: #ccc; margin: 0 10px;">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a href="https://github.com/codybrookes" target="_blank" style="color: #ccc; margin: 0 10px;">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a href="mailto:cbrookes1@hotmail.com" style="color: #ccc; margin: 0 10px;">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+    </div>
+    <div style="font-size: 0.9rem;">
+      © <span id="year"></span> Cody Brookes. All rights reserved.
+    </div>
+    <div style="font-size: 0.9rem;">
+      © <span id="year"></span> Cody Brookes. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Cody Brookes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span>CO</span><br><span>DY</span>
+    </a>
+    <nav class="nav-links">
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <style>
+    body {
+      background-image: url('https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Background+Photo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .projects-section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .projects-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 60px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(4px);
+      padding: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      color: #ff4c4c;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+  /* Tech Stack Overlay */
+    .tech-stack {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      border-radius: 0 0 15px 15px;
+    }
+
+    .project-card:hover .tech-stack {
+      transform: translateY(0);
+    }
+
+      /* Social Icons */
+   .social-icons {
+     position: fixed;
+     bottom: 60px;
+     left: 40px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     z-index: 1000;
+    }
+   .social-icons a {
+     color: #aaa;
+     font-size: 1rem;
+     transition: color 0.3s;
+    }
+   .social-icons a:hover {
+     color: #ff4c4c;
+    }
+  .resume-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 0px;
+  }
+
+  .resume-dropdown .fas {
+    color: #ff4c4c;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 5px);
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 180px;
+    z-index: 99;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    color: white;
+    padding: 6px 10px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: #ff4c4c;
+    color: #fff;
+  }
+
+  .resume-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <section class="projects-section">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+     <a href="https://github.com/codybrookes/Azure-Admin-Projects" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Azure+Iaas+Project+Photo.png" alt="Project 1">
+        <h3>Implement Azure Iaas</h3>
+        <p>Brief description of what the project is and what technologies were used.</p>
+        <div class="tech-stack">
+         <p>Tech Stack: Azure - Windows Command</p>
+     </div>
+   </a>
+     <a href="https://github.com/codybrookes/Honey-Pot" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Honey+Pot+Project+Photo.png" alt="Project 2">
+        <h3>Honey Pot</h3>
+        <p>The Honey Pot Project simulates vulnerable systems to detect and analyze cyber threats using Azure and T-Pot.</p>
+        <div class="tech-stack">
+         <p>Tech Stack: Azure - TPot</p>
+     </div>
+   </a>
+     <a href="https://github.com/codybrookes/AWS-EC2-Deployment-with-Terraform" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/EC2+Project+Photo.png" alt="Project 3">
+        <h3>AWS EC2 Deployment with Terraform</h3>
+        <p>The AWS EC2 Deployment Project automates infrastructure setup using Terraform to launch and manage virtual servers efficiently on AWS.</p>          
+        <div class="tech-stack">
+         <p>Tech Stack: AWS EC2 Instances - Terraform</p>
+    </div>
+   </a>
+     <a href="https://github.com/codybrookes/Azure-Iaas-Project" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Website+Portfolio+Project+.png" alt="Project 4">          
+        <h3>Portfolio Website Build</h3>
+        <p>The Porfolio Webiste project is something you are currently in! This entire website is a project that I put together to showcase my knowl$         
+        <div class="tech-stack">
+         <p>Tech Stack: AWS - HTML - CSS - S3 - NGINX</p>
+    </div>
+   </a>
+     <a href="https://github.com/codybrookes/Azure-Iaas-Project" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/S3+Bucket+Project+Photo.png" alt="Project 5">
+        <h3>S3 Static Website with CloudFront & Route 53</h3>
+        <p>This project sets up a static website on AWS S3, using CloudFront for fast content delivery and Route 53 for custom domain routing.</p>
+        <div class="tech-stack">
+         <p>Tech Stack: Azure, PowerShell, Terraform</p>
+    </div>
+   </a>
+     <a href="https://github.com/codybrookes/Azure-Iaas-Project" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Sharepoint++Project+Photo.png" alt="Project 6">
+        <h3>Shared Network Drive to SharePoint</h3>
+        <p>This was a large migration project that I lead for a 600+ person business unit.</p>
+        <div class="tech-stack">
+         <p>Tech Stack: SharePoint - Active Directory - Jira - Power Automate</p>
+    </div>
+   </a>
+     <a href="https://github.com/codybrookes/EC2-Cloudwatch-Monitoring/tree/main" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">      
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/CloudWatch+Monitoring+Photo.png" alt="Project 7">
+        <h3>CloudWatch Monitoring Stack</h3>
+        <p>This project builds a monitoring stack with Amazon CloudWatch to track metrics, logs, and alarms for improved system visibility and perfo$          
+        <div class="tech-stack">
+         <p>Tech Stack: AWS EC2, PowerShell, Terraform</p>
+    </div>
+   </a>
+     <a href="https://github.com/codybrookes/Azure-Iaas-Project" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Github+CICD+Project+Photo.png" alt="Project 8">
+        <h3>CI/CD Pipeline with GitHub Actions + S3</h3>
+        <p>Brief description of what the project is and what technologies were used.</p>
+        <div class="tech-stack">
+         <p>Tech Stack: Azure, PowerShell, Terraform</p>
+    </div>
+   </a>
+     <a href="https://github.com/codybrookes/Azure-Iaas-Project" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Dockerized+Project+Photo.png" alt="Project 9">
+        <h3>Dockerized Web App on ECS</h3>
+        <p>This project deploys a Dockerized web application on Amazon ECS, enabling scalable container management and streamlined deployments.</p>
+        <div class="tech-stack">
+         <p>Tech Stack: Azure, PowerShell, Terraform</p>
+    </div>
+   </a>
+     <a href="https://github.com/codybrookes/Azure-Iaas-Project" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+        <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/VPC+Subnets+EC2+Terraform+Project+Photo.png" alt="Project 10">
+        <h3>VPC + Subnets + EC2 with Terraform</h3>
+        <p>This project provisions a VPC with subnets and EC2 instances using Terraform to establish a scalable cloud infrastructure.</p>
+        <div class="tech-stack">
+         <p>Tech Stack: Azure, PowerShell, Terraform</p>
+    </div>
+   </a>
+     <a href="https://github.com/codybrookes/Azure-Iaas-Project" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+      <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/IAM+Access+Project+Photo.png" alt="Project 11">
+      <h3>IAM Role-Based Access Project</h3>
+      <p>This project sets up IAM role-based access in AWS to enforce secure, permission-based resource management.</p>
+      <div class="tech-stack">
+       <p>Tech Stack: Azure, PowerShell, Terraform</p>
+    </div>
+ </a>
+     <a href="https://github.com/codybrookes/Azure-Iaas-Project" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">          
+      <img src="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Cloud+Resume+Project+Photo.png" alt="Project 12">        
+      <h3>Cloud Resume Challenge</h3>
+      <p>This project showcases the Cloud Resume Challenge, utilizing tools like Lambda, DynamoDB, and API Gateway to build a serverless application.</p>
+      <div class="tech-stack">
+       <p>Tech Stack: Lambda, DynamoDB, API Gateway</p>
+    </div>
+ </a>
+ <div class="social-icons">
+  <a href="https://linkedin.com/in/cbrookes1" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  <a href="https://github.com/codybrookes" aria-label="GitHub"><i class="fab fa-github"></i></a>
+
+             <!-- Resume Dropdown -->
+   <div class="resume-dropdown">
+   <i class="fas fa-file-alt"></i>
+   <div class="dropdown-menu">
+   <a href="https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Project+Photos/Cody+Resumes+IT+Support.pdf" target="_blank">Tech Support</a>       
+   <a href="resume-cloud-engineer.pdf" target="_blank">Cloud Engineer Resume</a>
+    </div>
+   </div>
+  </div>
+</section>
+</body>
+<footer style="
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(5px);
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+padding: 40px 20px;
+text-align: center;
+color: #ccc;
+margin-top: 100px;
+">
+<div style="margin-bottom: 15px;">
+  <a href="https://linkedin.com/in/cbrookes1" target="_blank" style="color: #ccc; margin: 0 10px;">
+    <i class="fab fa-linkedin fa-lg"></i>
+  </a>
+  <a href="https://github.com/codybrookes" target="_blank" style="color: #ccc; margin: 0 10px;">
+    <i class="fab fa-github fa-lg"></i>
+  </a>
+  <a href="mailto:cbrookes1@hotmail.com" style="color: #ccc; margin: 0 10px;">
+    <i class="fas fa-envelope fa-lg"></i>
+  </a>
+</div>
+<div style="font-size: 0.9rem;">
+  © <span id="year"></span> Cody Brookes. All rights reserved.
+</div>
+</footer>
+</html>
+

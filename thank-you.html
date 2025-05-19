@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Cody Brookes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      background-image: url('https://cody-brookes-site-bucket.s3.us-east-1.amazonaws.com/Website+Background+Photo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      padding: 0 10%;
+      text-align: center;
+    }
+
+    .thank-you-box {
+      background: #1a1a1a;
+      padding: 60px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      max-width: 700px;
+    }
+
+    .thank-you-box h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .thank-you-box p {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+
+    .thank-you-box a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 30px;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    .thank-you-box a:hover {
+      background: #333;
+    }
+
+    @media (max-width: 600px) {
+      .thank-you-box {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span>CO</span><br><span>DY</span>
+    </a>
+    <nav class="nav-links">
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="thank-you-box">
+      <h1>Thank You!</h1>
+      <p>Your message has been successfully sent.<br>I’ll get back to you as soon as possible.</p>
+      <a href="index.html">Return to Home</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+    color: #ccc;
+    margin-top: 100px;
+  ">
+    <div style="margin-bottom: 15px;">
+      <a href="https://linkedin.com/in/cbrookes1" target="_blank" style="color: #ccc; margin: 0 10px;">
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+      <a href="https://github.com/codybrookes" target="_blank" style="color: #ccc; margin: 0 10px;">
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a href="mailto:cbrookes1@hotmail.com" style="color: #ccc; margin: 0 10px;">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+    </div>
+    <div style="font-size: 0.9rem;">
+      © <span id="2025"></span> Cody Brookes. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Set copyright year
+    document.getElementById("2025").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
