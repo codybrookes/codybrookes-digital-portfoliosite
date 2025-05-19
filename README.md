@@ -2,7 +2,7 @@
 
 A personal portfolio website built with HTML/CSS, hosted on **AWS S3 + CloudFront**, and deployed automatically using **GitHub Actions CI/CD**.
 
-![Deployment Status](https://img.shields.io/github/actions/workflow/status/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/deploy.yml?branch=main&label=deploy)
+![Deployment Status](https://img.shields.io/github/actions/workflow/status/codybrookes/codybrookes-digital-portfoliosite/deploy.yml?branch=main&label=deploy)
 
 ---
 
